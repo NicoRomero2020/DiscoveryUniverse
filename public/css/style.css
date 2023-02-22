@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* APLICO FLEX-BOX EN El BODY PARA ENCOLUMNAR HEADER, MAIN Y FOOTER EN UNA SOLA COLUMNA*/
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/img/estrellas_1080.jpg");
+    background-attachment: fixed;
+}
+
+/* APLICO FLEX-BOX EN El HEADER PARA ENCOLUMNAR LOGO Y LA BARRA DE NAVEGACION EN UNA SOLA FILA */
+.header-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+
+    height: 152px;
+    width: 100%;
+}
+#logo{
+    font-family: 'Bungee Color';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+
+    width: 130px;
+    height: fit-content;
+
+    color: white;
+}
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    font-family: 'BioRhyme';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 50px;
+}
+
+/********** NO  ENTIENDO PORQUE LA CLASE NAV-ITEM NO TOMA LAS PROPIEDADES **********/
+.nav-item {
+    text-decoration: none;
+    color: white;
+}
+/********** NO  ENTIENDO PORQUE LA CLASE NAV-ITEM NO TOMA LAS PROPIEDADES **********/
+
+
+/* APLICO GRID A LA SECCION MAIN PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
+.main-conteiner{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto; /* SE AGREGAN FILAS EN LA MEDIDA QUE SE VAYA NUTRIENDO EL ARTICULO */
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+}
+.main-conteiner-sol{
+    background-image: url(../assets/img/SOL_1366_2000.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: auto;
+    height: 1224px;
+}
+article{
+    margin: auto;
+    border: double 1px white;
+    width: 500px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+    ;
+}
+main img{
+    width: max-content;
+}
+
+/* APLICO FLEX EN EL FOOTER PARA ENCOLUMNAR LA FIRMA Y LA SECCION DE REDES SOCIALES EN UNA SOLA FILA */
+.footer-conteiner{
+    height: 149px;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+#sign {
+    width: auto;
+    height: 61px;
+    margin-right: 100px;
+
+    font-family: 'BioRhyme';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 50px;
+    color: #ffffff;
+}
+#socialmedia{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    width: 310px;
+    height: 93px;
+}
+#socialmedia a img{
+    width: 50px;
+    height: 50px;
+}
+
+/****** MOBILE RESPONSIVE ******/
+
+@media (max-width: 432px){
+    body {
+        background-image: url(../assets/img/background_2.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .header-conteiner {
+        flex-direction: column;
+        height: 100px;
+        gap: 0px;
+    }
+    #logo {
+        font-weight: 50;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0px;
+        font-weight: 50;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .main-conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-conteiner-sol{
+        background-image: url("../assets/img/sol_responsive.jpg");
+        background-position: center;
+        height: 580px;
+    }
+    main img{
+        width: 335px;
+    }
+    .img-tierra {
+        order: -1;
+    }
+    #seccion3 {
+        order: 4;
+    }
+    article {
+        border: double 1px white;
+        width: 65%;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .footer-conteiner{
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+    
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #sign {
+        height: 20px;
+        margin-right: 10px;
+    
+        font-size: 12px;
+        line-height: 20px;
+        color: white;
+    }
+    #socialmedia{
+        order: -1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        width: 310px;
+        height: 93px;
+    }
+    #socialmedia a img{
+        width: 50px;
+        height: 50px;
+    }
+}
