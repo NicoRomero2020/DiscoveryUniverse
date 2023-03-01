@@ -11,6 +11,12 @@ body{
     background-image: url("../assets/img/estrellas_1080.jpg");
     background-attachment: fixed;
 }
+.sol-body{
+    background-image: url("../assets/img/SOL_1366_2000.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* APLICO FLEX-BOX EN El HEADER PARA ENCOLUMNAR LOGO Y LA BARRA DE NAVEGACION EN UNA SOLA FILA */
 .header-conteiner{
@@ -23,6 +29,17 @@ body{
     height: 152px;
     width: 100%;
 }
+.header-conteiner #navigation .nav-links li{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.header-conteiner #navigation .nav-links a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
 #logo{
     font-family: 'Bungee Color';
     font-weight: 400;
@@ -46,14 +63,6 @@ body{
     line-height: 50px;
 }
 
-/********** NO  ENTIENDO PORQUE LA CLASE NAV-ITEM NO TOMA LAS PROPIEDADES **********/
-.nav-item {
-    text-decoration: none;
-    color: white;
-}
-/********** NO  ENTIENDO PORQUE LA CLASE NAV-ITEM NO TOMA LAS PROPIEDADES **********/
-
-
 /* APLICO GRID A LA SECCION MAIN PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
 .main-conteiner{
     display: grid;
@@ -64,11 +73,8 @@ body{
     align-items: center;
 }
 .main-conteiner-sol{
-    background-image: url(../assets/img/SOL_1366_2000.jpeg);
-    background-repeat: no-repeat;
-    background-size: contain;
     width: auto;
-    height: 1224px;
+    height: 590px;
 }
 article{
     margin: auto;
@@ -83,6 +89,19 @@ article{
 
     color: #FFFFFF;
     ;
+}
+.sol-article{
+    margin: auto;
+    border: double 1px white;
+    width: 900px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
 }
 main img{
     width: max-content;
@@ -139,6 +158,12 @@ main img{
         background-repeat: no-repeat;
         background-size: contain;
     }
+    .sol-body{
+        background-image: url("../assets/img/sol_responsive.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .header-conteiner {
         flex-direction: column;
         height: 100px;
@@ -162,9 +187,8 @@ main img{
         align-items: center;
     }
     .main-conteiner-sol{
-        background-image: url("../assets/img/sol_responsive.jpg");
-        background-position: center;
-        height: 580px;
+        height: auto;
+        margin: 12px;
     }
     main img{
         width: 335px;
@@ -181,6 +205,19 @@ main img{
         font-weight: 200;
         font-size: 15px;
         line-height: 24px;
+    }
+    .sol-article{
+        margin: auto;
+        border: double 1px white;
+        width: auto;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 30px;
+    
+        color: #FFFFFF;
     }
     .footer-conteiner{
         width: 100%;
