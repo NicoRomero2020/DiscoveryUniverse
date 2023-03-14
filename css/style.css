@@ -1,252 +1,328 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* APLICO FLEX-BOX EN El BODY PARA ENCOLUMNAR HEADER, MAIN Y FOOTER EN UNA SOLA COLUMNA*/
-body{
-    display: flex;
+/* MIXINS */ /* APLICO FLEX-BOX EN El HEADER PARA ENCOLUMNAR LOGO Y LA BARRA DE NAVEGACION EN UNA SOLA FILA */
+.header-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  height: 150px;
+  width: 100%;
+}
+.header-conteiner #logo {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px cyan;
+  font-size: 35px;
+  line-height: 45px;
+  width: 160px;
+  height: fit-content;
+}
+.header-conteiner #navigation .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  font-family: "BioRhyme";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+}
+.header-conteiner #navigation .nav-links li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.header-conteiner #navigation .nav-links li a:hover {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px cyan;
+}
+
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  .header-conteiner {
     flex-direction: column;
-    background-image: url("../assets/img/estrellas_1080.jpg");
-    background-attachment: fixed;
+    gap: 0px;
+  }
 }
-.sol-body{
-    background-image: url("../assets/img/SOL_1366_2000.jpeg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+/****** MOBILE RESPONSIVE 425px ******/
+@media (max-width: 425px) {
+  .header-conteiner {
+    flex-direction: column;
+    gap: 0px;
+    height: 300px;
+  }
+  .header-conteiner #logo {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .header-conteiner #navigation .nav-links {
+    flex-direction: column;
+    gap: 0px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .header-conteiner #navigation .nav-links li {
+    text-align: center;
+  }
+}
+/****** MOBILE RESPONSIVE 375px ******/
+@media (max-width: 375px) {
+  .header-conteiner {
+    flex-direction: column;
+    gap: 0px;
+    height: 300px;
+  }
+  .header-conteiner #logo {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .header-conteiner #navigation .nav-links {
+    flex-direction: column;
+    gap: 0px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .header-conteiner #navigation .nav-links li {
+    text-align: center;
+  }
+}
+/****** MOBILE RESPONSIVE 320px ******/
+@media (max-width: 320px) {
+  .header-conteiner {
+    flex-direction: column;
+    gap: 0px;
+    height: 300px;
+  }
+  .header-conteiner #logo {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .header-conteiner #navigation .nav-links {
+    flex-direction: column;
+    gap: 0px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .header-conteiner #navigation .nav-links li {
+    text-align: center;
+  }
+}
+/* APLICO FLEX EN EL FOOTER PARA ENCOLUMNAR LA FIRMA Y LA SECCION DE REDES SOCIALES EN UNA SOLA FILA */
+.footer-conteiner {
+  height: 150px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer-conteiner #sign {
+  width: auto;
+  height: 60px;
+  margin-right: 100px;
+  font-family: "BioRhyme";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 50px;
+  color: white;
+}
+.footer-conteiner #socialmedia {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 310px;
+  height: 93px;
+}
+.footer-conteiner #socialmedia a img {
+  width: 50px;
+  height: 50px;
 }
 
-/* APLICO FLEX-BOX EN El HEADER PARA ENCOLUMNAR LOGO Y LA BARRA DE NAVEGACION EN UNA SOLA FILA */
-.header-conteiner{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-
-    height: 152px;
-    width: 100%;
-}
-.header-conteiner #navigation .nav-links li{
-    list-style: none;
-    text-decoration: none;
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  .footer-conteiner {
+    flex-direction: column;
+  }
+  .footer-conteiner #sign {
+    height: 20px;
+    margin-right: 0px;
+    font-size: 35px;
+    line-height: 20px;
     color: white;
+    order: 1;
+  }
 }
-.header-conteiner #navigation .nav-links a{
-    list-style: none;
-    text-decoration: none;
+/****** MOBILE RESPONSIVE 425px ******/
+@media (max-width: 425px) {
+  .footer-conteiner {
+    flex-direction: column;
+  }
+  .footer-conteiner #sign {
+    height: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 20px;
     color: white;
+  }
 }
-
-#logo{
-    font-family: 'Bungee Color';
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-
-    width: 130px;
-    height: fit-content;
-
+/****** MOBILE RESPONSIVE 375px ******/
+@media (max-width: 375px) {
+  .footer-conteiner {
+    flex-direction: column;
+  }
+  .footer-conteiner #sign {
+    height: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 20px;
     color: white;
+  }
 }
-.nav-links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+/****** MOBILE RESPONSIVE 320px ******/
+@media (max-width: 320px) {
+  .footer-conteiner {
+    flex-direction: column;
+  }
+  .footer-conteiner #sign {
+    height: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+  }
+}
+/* APLICO FLEX-BOX EN El BODY PARA ENCOLUMNAR HEADER, MAIN Y FOOTER EN UNA SOLA COLUMNA*/
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/img/estrellas_1080.jpg");
+  background-attachment: fixed;
+}
 
-    font-family: 'BioRhyme';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 50px;
+.sol-body {
+  background-image: url("../assets/img/SOL_1366_2000.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* APLICO GRID A LA SECCION MAIN PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
-.main-conteiner{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto; /* SE AGREGAN FILAS EN LA MEDIDA QUE SE VAYA NUTRIENDO EL ARTICULO */
-    justify-content: space-evenly;
-    align-content: space-evenly;
+.main-conteiner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto; /* SE AGREGAN FILAS EN LA MEDIDA QUE SE VAYA NUTRIENDO EL ARTICULO */
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.main-conteiner-sol {
+  width: auto;
+  height: 590px;
+}
+
+article {
+  margin: 20%;
+  border: double 1px white;
+  width: auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: x-large;
+  line-height: normal;
+  color: white;
+}
+
+.sol-article {
+  margin: auto;
+  border: double 1px white;
+  width: 900px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+
+main img {
+  width: -webkit-fill-available;
+}
+
+/****** MOBILE RESPONSIVE 1024, 768, 425, 375, 320 ******/
+@media (max-width: 425px) {
+  body {
+    background-image: url(../assets/img/background_2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sol-body {
+    background-image: url("../assets/img/sol_responsive.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main-conteiner {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-.main-conteiner-sol{
-    width: auto;
-    height: 590px;
-}
-article{
+  }
+  .main-conteiner-sol {
+    height: auto;
+    margin: 12px;
+  }
+  main img {
+    width: 335px;
+  }
+  .img-tierra {
+    order: -1;
+  }
+  #seccion3 {
+    order: 4;
+  }
+  article {
+    border: double 1px white;
+    margin: auto;
+    width: 65%;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .sol-article {
     margin: auto;
     border: double 1px white;
-    width: 500px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #FFFFFF;
-    ;
-}
-.sol-article{
-    margin: auto;
-    border: double 1px white;
-    width: 900px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-
-    color: #FFFFFF;
-}
-main img{
-    width: max-content;
-}
-
-/* APLICO FLEX EN EL FOOTER PARA ENCOLUMNAR LA FIRMA Y LA SECCION DE REDES SOCIALES EN UNA SOLA FILA */
-.footer-conteiner{
-    height: 149px;
-    justify-content: center;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 80px;
-    padding-left: 80px;
-}
-#sign {
     width: auto;
-    height: 61px;
-    margin-right: 100px;
-
-    font-family: 'BioRhyme';
+    font-family: "Inter";
     font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 50px;
-    color: #ffffff;
-}
-#socialmedia{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    width: 310px;
-    height: 93px;
-}
-#socialmedia a img{
-    width: 50px;
-    height: 50px;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
 }
 
-/****** MOBILE RESPONSIVE ******/
-
-@media (max-width: 432px){
-    body {
-        background-image: url(../assets/img/background_2.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    .sol-body{
-        background-image: url("../assets/img/sol_responsive.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .header-conteiner {
-        flex-direction: column;
-        height: 100px;
-        gap: 0px;
-    }
-    #logo {
-        font-weight: 50;
-        font-size: 12px;
-        line-height: 18px;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 0px;
-        font-weight: 50;
-        font-size: 12px;
-        line-height: 18px;
-    }
-    .main-conteiner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .main-conteiner-sol{
-        height: auto;
-        margin: 12px;
-    }
-    main img{
-        width: 335px;
-    }
-    .img-tierra {
-        order: -1;
-    }
-    #seccion3 {
-        order: 4;
-    }
-    article {
-        border: double 1px white;
-        width: 65%;
-        font-weight: 200;
-        font-size: 15px;
-        line-height: 24px;
-    }
-    .sol-article{
-        margin: auto;
-        border: double 1px white;
-        width: auto;
-        
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: normal;
-        font-size: 25px;
-        line-height: 30px;
-    
-        color: #FFFFFF;
-    }
-    .footer-conteiner{
-        width: 100%;
-    
-        display: flex;
-        flex-direction: column;
-    
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    #sign {
-        height: 20px;
-        margin-right: 10px;
-    
-        font-size: 12px;
-        line-height: 20px;
-        color: white;
-    }
-    #socialmedia{
-        order: -1;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: center;
-        width: 310px;
-        height: 93px;
-    }
-    #socialmedia a img{
-        width: 50px;
-        height: 50px;
-    }
-}
+/*# sourceMappingURL=style.css.map */

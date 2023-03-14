@@ -1,0 +1,116 @@
+/* APLICO FLEX-BOX EN El HEADER PARA ENCOLUMNAR LOGO Y LA BARRA DE NAVEGACION EN UNA SOLA FILA */
+.header-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    height: 150px;
+    width: 100%;
+
+    #logo{
+        @include logo-style;
+        font-size: 35px;
+        line-height: 45px;  
+        width: 160px;
+        height: fit-content;
+    }
+
+    #navigation .nav-links{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;   
+        font-family: 'BioRhyme';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 50px;
+
+        li a{
+            list-style: none;
+            text-decoration: none;
+            color: white; 
+            &:hover{@include logo-style;}
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 768px ******/ 
+@media (max-width: 768px){
+    .header-conteiner {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+/****** MOBILE RESPONSIVE 425px ******/ 
+@media (max-width: 425px){
+    .header-conteiner {
+        flex-direction: column;
+        gap: 0px;
+        height: 300px;
+        #logo {
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 40px;
+        }
+        #navigation .nav-links {
+            flex-direction: column;
+            gap: 0px;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 45px;
+            li {
+                text-align: center;
+            }
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 375px ******/ 
+@media (max-width: 375px){
+    .header-conteiner {
+        flex-direction: column;
+        gap: 0px;
+        height: 300px;
+        #logo {
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 40px;
+        }
+        #navigation .nav-links {
+            flex-direction: column;
+            gap: 0px;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 45px;
+            li {
+                text-align: center;
+            }
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 320px ******/ 
+@media (max-width: 320px){
+    .header-conteiner {
+        flex-direction: column;
+        gap: 0px;
+        height: 300px;
+        #logo {
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 40px;
+        }
+        #navigation .nav-links {
+            flex-direction: column;
+            gap: 0px;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 45px;
+            li {
+                text-align: center;
+            }
+        }
+    }
+}

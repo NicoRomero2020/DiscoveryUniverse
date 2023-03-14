@@ -1,0 +1,116 @@
+@import "reset";
+@import "mixins";
+@import "header";
+@import "footer";
+
+/* APLICO FLEX-BOX EN El BODY PARA ENCOLUMNAR HEADER, MAIN Y FOOTER EN UNA SOLA COLUMNA*/
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/img/estrellas_1080.jpg");
+    background-attachment: fixed;
+}
+.sol-body{
+    background-image: url("../assets/img/SOL_1366_2000.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* APLICO GRID A LA SECCION MAIN PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
+.main-conteiner{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto; /* SE AGREGAN FILAS EN LA MEDIDA QUE SE VAYA NUTRIENDO EL ARTICULO */
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+}
+.main-conteiner-sol{
+    width: auto;
+    height: 590px;
+}
+article{
+    margin: 20%;
+    border: double 1px white;
+    width: auto;    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: x-large;
+    line-height: normal;
+    color: white;
+}
+.sol-article{
+    margin: auto;
+    border: double 1px white;
+    width: 900px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: white;
+}
+main img{
+    width: -webkit-fill-available;
+}
+
+/****** MOBILE RESPONSIVE 1024, 768, 425, 375, 320 ******/ 
+
+@media (max-width: 425px){
+    body {
+        background-image: url(../assets/img/background_2.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .sol-body{
+        background-image: url("../assets/img/sol_responsive.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .main-conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-conteiner-sol{
+        height: auto;
+        margin: 12px;
+    }
+    main img{
+        width: 335px;
+    }
+    .img-tierra {
+        order: -1;
+    }
+    #seccion3 {
+        order: 4;
+    }
+    article {
+        border: double 1px white;
+        margin: auto;
+        width: 65%;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .sol-article{
+        margin: auto;
+        border: double 1px white;
+        width: auto;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 30px;
+    
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,94 @@
+/* APLICO FLEX EN EL FOOTER PARA ENCOLUMNAR LA FIRMA Y LA SECCION DE REDES SOCIALES EN UNA SOLA FILA */
+.footer-conteiner{
+    height: 150px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    #sign {
+        width: auto;
+        height: 60px;
+        margin-right: 100px;
+        font-family: 'BioRhyme';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 50px;
+        color: white;
+    }
+    #socialmedia{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        width: 310px;
+        height: 93px;
+        a img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 768px ******/ 
+@media (max-width: 768px){
+    .footer-conteiner{
+        flex-direction: column;
+        #sign {
+            height: 20px;
+            margin-right: 0px;
+            font-size: 35px;
+            line-height: 20px;
+            color: white;
+            order: 1;
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 425px ******/ 
+@media (max-width: 425px){
+    .footer-conteiner{
+        flex-direction: column;
+        #sign {
+            height: 20px;
+            margin-right: 10px;
+            font-size: 20px;
+            line-height: 20px;
+            color: white;
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 375px ******/ 
+@media (max-width: 375px){
+    .footer-conteiner{
+        flex-direction: column;
+        #sign {
+            height: 20px;
+            margin-right: 10px;
+            font-size: 20px;
+            line-height: 20px;
+            color: white;
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 320px ******/ 
+@media (max-width: 320px){
+    .footer-conteiner{
+        flex-direction: column;
+        #sign {
+            height: 20px;
+            margin-right: 10px;
+            font-size: 20px;
+            line-height: 20px;
+            color: white;
+        }
+    }
+}
