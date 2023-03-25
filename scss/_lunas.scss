@@ -11,22 +11,78 @@
             li a{&:hover{@include logo-style-white}}
         }
     }
-    .lunas-main-conteiner{
+    .lunas-main-conteiner {
         width: auto;
-        height: 590px;
-        .lunas-article{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .lunas-article {
             background-color: rgba(255, 255, 255, 0.2);
-            margin: 0% 10% 0% 5%;            
+            margin: 0% 10% 5% 5%;            
             padding: 1%;
             border: double 1px white;            
             border-radius: 1rem;
-            width: 900px;
+            width: 50%;
             font-family: 'Inter';
             font-style: normal;
             font-weight: 400;
             font-size: 24px;
             line-height: 29px;
             color: white;
+        }
+        #seccion2 {
+            @extend .lunas-article;
+            text-align: center;
+            margin: 0% 10% 0% 5%;;
+        }
+        .lunas-carrusel-conteiner {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1% 0% 10% 5%;
+            padding: 1%;
+            width: 50%;     
+            height: 430px;                 
+            overflow: hidden;
+            .lunas-item-carrusel {
+                position: relative;  
+                height: 100%;
+                align-items: center;
+                .lunas-slide {
+                    position: absolute;
+                    margin-inline: 25%;
+                    margin-block: 1%;
+                    width: 50%;
+                }
+                .lunas-carrusel-bottoms {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1%;
+                    .luna-prev, .luna-next {
+                        padding: 2rem;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 20px;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                        cursor: pointer;
+                        transform: translateY(-50%);
+                        transition: background-color 0.3s ease;
+                    }
+                    .luna-next {
+                        right: 0;
+                        border-radius: 3px 0 0 3px;
+                    }
+                    .luna-prev:hover, .luna-next:hover {
+                    background-color: rgba(0,0,0,0.8);
+                    }
+                    .luna-next:focus, .luna-prev:focus {
+                        outline: none;
+                    }
+                }
+            }
         }
     }
     .lunas-footer-conteiner{
@@ -60,23 +116,34 @@
 /****** MOBILE RESPONSIVE 425px ******/ 
 @media (max-width: 425px){
     .lunas-body{
-        background-image: url("../assets/img/lunas_responsive.jpg");
+        background-image: url("../assets/img/luna_responsive.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
-        .main-conteiner-lunas{
+        .lunas-main-conteiner{
             height: auto;
             margin: 12px;
             .lunas-article{
-                margin: auto;
-                border: double 1px white;
-                width: auto;                
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 25px;
-                line-height: 30px;
-                color: #FFFFFF;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .lunas-carrusel-conteiner {
+                background-color: rgba(255, 255, 255, 0.2);
+                margin-inline: 5%;
+                padding: 1%;
+                width: 90%;     
+                height: 300px;                 
+                overflow: hidden;
+                .lunas-item-carrusel {
+                    height: 100%;
+                    .lunas-slide {
+                        margin-inline: 5%;
+                        margin-block: 1%;
+                        width: 100%;
+                        img {
+                            width: fit-content;
+                        }
+                    }
+                }
             }
         }
     }
