@@ -1,7 +1,31 @@
 /* MIXINS */
-@mixin logo-style {
+@mixin logo-style-cyan {
     font-family: cursive;
     font-weight: bold;
     color: black;
     text-shadow: 2px 2px 3px cyan;
+}
+@mixin logo-style-yellow {
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 3px yellow;
+}
+@mixin logo-style-white {
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 3px white;
+}
+@mixin logo-style-red {
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 3px red;
+}
+@mixin logo-style-orange {
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 3px orange;
 }

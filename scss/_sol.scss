@@ -1,0 +1,83 @@
+.sol-body{
+    background-image: url("../assets/img/SOL_1366_2000.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .sol-header-conteiner {
+        @extend .header-conteiner;
+        #logo{@include logo-style-yellow};
+        #navigation .nav-links{
+            color: yellow;
+            li a{&:hover{@include logo-style-yellow}}
+        }
+    }
+    .sol-main-conteiner{
+        width: auto;
+        height: 590px;
+        .sol-article{
+            background-color: rgba(255, 255, 0, 0.2);
+            margin: auto;
+            padding: 1%;
+            border: double 1px yellow;
+            border-radius: 1rem;
+            width: 900px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: white;
+        }
+    }
+    .sol-footer-conteiner{
+        @extend .footer-conteiner;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: double 3px yellow;
+        border-radius: 1rem;
+    }
+}
+/****** MOBILE RESPONSIVE 768px ******/ 
+@media (max-width: 768px){
+    .sol-body {
+        .sol-main-conteiner{
+            height: auto;
+            margin: 12px;
+            .sol-article{
+                margin: 10%;
+                border: double 1px white;
+                width: auto;                
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                color: white;
+            }
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 425px ******/ 
+@media (max-width: 425px){
+    .sol-body{
+        background-image: url("../assets/img/sol_responsive.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .main-conteiner-sol{
+            height: auto;
+            margin: 12px;
+            .sol-article{
+                margin: auto;
+                border: double 1px white;
+                width: auto;                
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                color: white;
+            }
+        }
+    }
+}

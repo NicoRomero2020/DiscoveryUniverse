@@ -1,0 +1,81 @@
+.exp-body{
+    background-image: url("../assets/img/starship.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .exp-header-conteiner {
+        @extend .header-conteiner;
+        #logo{@include logo-style-orange};
+        #navigation .nav-links{
+            color: orange;
+            li a{&:hover{@include logo-style-orange}}
+        }
+    }
+    .exp-main-conteiner{
+        .exp-article{
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 5% 0% 5% 50%;            
+            padding: 1%;
+            border: double 1px orange;            
+            border-radius: 1rem;
+            width: 40%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: white;
+        }
+    }
+    .exp-footer-conteiner{
+        @extend .footer-conteiner;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: double 3px orange;
+        border-radius: 1rem;
+    }
+}
+/****** MOBILE RESPONSIVE 768px ******/ 
+@media (max-width: 768px){
+    .exp-body {
+        .exp-main-conteiner{
+            height: auto;
+            margin: 12px;
+            .exp-article{
+                margin: 10%;
+                border: double 1px white;
+                width: auto;                
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 425px ******/ 
+@media (max-width: 425px){
+    .exp-body{
+        background-image: url("../assets/img/lunas_responsive.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .main-conteiner-lunas{
+            height: auto;
+            margin: 12px;
+            .exp-article{
+                margin: auto;
+                border: double 1px white;
+                width: auto;                
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

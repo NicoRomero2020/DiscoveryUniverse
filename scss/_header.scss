@@ -9,7 +9,7 @@
     width: 100%;
 
     #logo{
-        @include logo-style;
+        @include logo-style-cyan;
         font-size: 35px;
         line-height: 45px;  
         width: 160px;
@@ -25,12 +25,14 @@
         font-weight: 400;
         font-size: 32px;
         line-height: 50px;
+        list-style: none;
+        text-decoration: none;
 
         li a{
             list-style: none;
             text-decoration: none;
             color: white; 
-            &:hover{@include logo-style;}
+            &:hover{@include logo-style-cyan;}
         }
     }
 }

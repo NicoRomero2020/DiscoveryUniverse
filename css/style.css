@@ -6,7 +6,7 @@
 }
 
 /* MIXINS */ /* APLICO FLEX-BOX EN El HEADER PARA ENCOLUMNAR LOGO Y LA BARRA DE NAVEGACION EN UNA SOLA FILA */
-.header-conteiner {
+.header-conteiner, .exp-body .exp-header-conteiner, .obs-body .obs-header-conteiner, .lunas-body .lunas-header-conteiner, .sol-body .sol-header-conteiner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,7 +15,7 @@
   height: 150px;
   width: 100%;
 }
-.header-conteiner #logo {
+.header-conteiner #logo, .exp-body .exp-header-conteiner #logo, .obs-body .obs-header-conteiner #logo, .lunas-body .lunas-header-conteiner #logo, .sol-body .sol-header-conteiner #logo {
   font-family: cursive;
   font-weight: bold;
   color: black;
@@ -25,7 +25,7 @@
   width: 160px;
   height: fit-content;
 }
-.header-conteiner #navigation .nav-links {
+.header-conteiner #navigation .nav-links, .exp-body .exp-header-conteiner #navigation .nav-links, .obs-body .obs-header-conteiner #navigation .nav-links, .lunas-body .lunas-header-conteiner #navigation .nav-links, .sol-body .sol-header-conteiner #navigation .nav-links {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -34,13 +34,15 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 50px;
+  list-style: none;
+  text-decoration: none;
 }
-.header-conteiner #navigation .nav-links li a {
+.header-conteiner #navigation .nav-links li a, .exp-body .exp-header-conteiner #navigation .nav-links li a, .obs-body .obs-header-conteiner #navigation .nav-links li a, .lunas-body .lunas-header-conteiner #navigation .nav-links li a, .sol-body .sol-header-conteiner #navigation .nav-links li a {
   list-style: none;
   text-decoration: none;
   color: white;
 }
-.header-conteiner #navigation .nav-links li a:hover {
+.header-conteiner #navigation .nav-links li a:hover, .exp-body .exp-header-conteiner #navigation .nav-links li a:hover, .obs-body .obs-header-conteiner #navigation .nav-links li a:hover, .lunas-body .lunas-header-conteiner #navigation .nav-links li a:hover, .sol-body .sol-header-conteiner #navigation .nav-links li a:hover {
   font-family: cursive;
   font-weight: bold;
   color: black;
@@ -49,82 +51,82 @@
 
 /****** MOBILE RESPONSIVE 768px ******/
 @media (max-width: 768px) {
-  .header-conteiner {
+  .header-conteiner, .exp-body .exp-header-conteiner, .obs-body .obs-header-conteiner, .lunas-body .lunas-header-conteiner, .sol-body .sol-header-conteiner {
     flex-direction: column;
     gap: 0px;
   }
 }
 /****** MOBILE RESPONSIVE 425px ******/
 @media (max-width: 425px) {
-  .header-conteiner {
+  .header-conteiner, .exp-body .exp-header-conteiner, .obs-body .obs-header-conteiner, .lunas-body .lunas-header-conteiner, .sol-body .sol-header-conteiner {
     flex-direction: column;
     gap: 0px;
     height: 300px;
   }
-  .header-conteiner #logo {
+  .header-conteiner #logo, .exp-body .exp-header-conteiner #logo, .obs-body .obs-header-conteiner #logo, .lunas-body .lunas-header-conteiner #logo, .sol-body .sol-header-conteiner #logo {
     font-weight: normal;
     font-size: 30px;
     line-height: 40px;
   }
-  .header-conteiner #navigation .nav-links {
+  .header-conteiner #navigation .nav-links, .exp-body .exp-header-conteiner #navigation .nav-links, .obs-body .obs-header-conteiner #navigation .nav-links, .lunas-body .lunas-header-conteiner #navigation .nav-links, .sol-body .sol-header-conteiner #navigation .nav-links {
     flex-direction: column;
     gap: 0px;
     font-weight: normal;
     font-size: 30px;
     line-height: 45px;
   }
-  .header-conteiner #navigation .nav-links li {
+  .header-conteiner #navigation .nav-links li, .exp-body .exp-header-conteiner #navigation .nav-links li, .obs-body .obs-header-conteiner #navigation .nav-links li, .lunas-body .lunas-header-conteiner #navigation .nav-links li, .sol-body .sol-header-conteiner #navigation .nav-links li {
     text-align: center;
   }
 }
 /****** MOBILE RESPONSIVE 375px ******/
 @media (max-width: 375px) {
-  .header-conteiner {
+  .header-conteiner, .exp-body .exp-header-conteiner, .obs-body .obs-header-conteiner, .lunas-body .lunas-header-conteiner, .sol-body .sol-header-conteiner {
     flex-direction: column;
     gap: 0px;
     height: 300px;
   }
-  .header-conteiner #logo {
+  .header-conteiner #logo, .exp-body .exp-header-conteiner #logo, .obs-body .obs-header-conteiner #logo, .lunas-body .lunas-header-conteiner #logo, .sol-body .sol-header-conteiner #logo {
     font-weight: normal;
     font-size: 30px;
     line-height: 40px;
   }
-  .header-conteiner #navigation .nav-links {
+  .header-conteiner #navigation .nav-links, .exp-body .exp-header-conteiner #navigation .nav-links, .obs-body .obs-header-conteiner #navigation .nav-links, .lunas-body .lunas-header-conteiner #navigation .nav-links, .sol-body .sol-header-conteiner #navigation .nav-links {
     flex-direction: column;
     gap: 0px;
     font-weight: normal;
     font-size: 30px;
     line-height: 45px;
   }
-  .header-conteiner #navigation .nav-links li {
+  .header-conteiner #navigation .nav-links li, .exp-body .exp-header-conteiner #navigation .nav-links li, .obs-body .obs-header-conteiner #navigation .nav-links li, .lunas-body .lunas-header-conteiner #navigation .nav-links li, .sol-body .sol-header-conteiner #navigation .nav-links li {
     text-align: center;
   }
 }
 /****** MOBILE RESPONSIVE 320px ******/
 @media (max-width: 320px) {
-  .header-conteiner {
+  .header-conteiner, .exp-body .exp-header-conteiner, .obs-body .obs-header-conteiner, .lunas-body .lunas-header-conteiner, .sol-body .sol-header-conteiner {
     flex-direction: column;
     gap: 0px;
     height: 300px;
   }
-  .header-conteiner #logo {
+  .header-conteiner #logo, .exp-body .exp-header-conteiner #logo, .obs-body .obs-header-conteiner #logo, .lunas-body .lunas-header-conteiner #logo, .sol-body .sol-header-conteiner #logo {
     font-weight: normal;
     font-size: 30px;
     line-height: 40px;
   }
-  .header-conteiner #navigation .nav-links {
+  .header-conteiner #navigation .nav-links, .exp-body .exp-header-conteiner #navigation .nav-links, .obs-body .obs-header-conteiner #navigation .nav-links, .lunas-body .lunas-header-conteiner #navigation .nav-links, .sol-body .sol-header-conteiner #navigation .nav-links {
     flex-direction: column;
     gap: 0px;
     font-weight: normal;
     font-size: 30px;
     line-height: 45px;
   }
-  .header-conteiner #navigation .nav-links li {
+  .header-conteiner #navigation .nav-links li, .exp-body .exp-header-conteiner #navigation .nav-links li, .obs-body .obs-header-conteiner #navigation .nav-links li, .lunas-body .lunas-header-conteiner #navigation .nav-links li, .sol-body .sol-header-conteiner #navigation .nav-links li {
     text-align: center;
   }
 }
 /* APLICO FLEX EN EL FOOTER PARA ENCOLUMNAR LA FIRMA Y LA SECCION DE REDES SOCIALES EN UNA SOLA FILA */
-.footer-conteiner {
+.footer-conteiner, .exp-body .exp-footer-conteiner, .obs-body .obs-footer-conteiner, .lunas-body .lunas-footer-conteiner, .sol-body .sol-footer-conteiner {
   height: 150px;
   justify-content: center;
   display: flex;
@@ -133,11 +135,13 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 100%;
+  width: 60%;
   margin-right: auto;
   margin-left: auto;
+  border: double 3px cyan;
+  border-radius: 1rem;
 }
-.footer-conteiner #sign {
+.footer-conteiner #sign, .exp-body .exp-footer-conteiner #sign, .obs-body .obs-footer-conteiner #sign, .lunas-body .lunas-footer-conteiner #sign, .sol-body .sol-footer-conteiner #sign {
   width: auto;
   height: 60px;
   margin-right: 100px;
@@ -148,7 +152,7 @@
   line-height: 50px;
   color: white;
 }
-.footer-conteiner #socialmedia {
+.footer-conteiner #socialmedia, .exp-body .exp-footer-conteiner #socialmedia, .obs-body .obs-footer-conteiner #socialmedia, .lunas-body .lunas-footer-conteiner #socialmedia, .sol-body .sol-footer-conteiner #socialmedia {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -156,17 +160,17 @@
   width: 310px;
   height: 93px;
 }
-.footer-conteiner #socialmedia a img {
+.footer-conteiner #socialmedia a img, .exp-body .exp-footer-conteiner #socialmedia a img, .obs-body .obs-footer-conteiner #socialmedia a img, .lunas-body .lunas-footer-conteiner #socialmedia a img, .sol-body .sol-footer-conteiner #socialmedia a img {
   width: 50px;
   height: 50px;
 }
 
 /****** MOBILE RESPONSIVE 768px ******/
 @media (max-width: 768px) {
-  .footer-conteiner {
+  .footer-conteiner, .exp-body .exp-footer-conteiner, .obs-body .obs-footer-conteiner, .lunas-body .lunas-footer-conteiner, .sol-body .sol-footer-conteiner {
     flex-direction: column;
   }
-  .footer-conteiner #sign {
+  .footer-conteiner #sign, .exp-body .exp-footer-conteiner #sign, .obs-body .obs-footer-conteiner #sign, .lunas-body .lunas-footer-conteiner #sign, .sol-body .sol-footer-conteiner #sign {
     height: 20px;
     margin-right: 0px;
     font-size: 35px;
@@ -177,10 +181,10 @@
 }
 /****** MOBILE RESPONSIVE 425px ******/
 @media (max-width: 425px) {
-  .footer-conteiner {
+  .footer-conteiner, .exp-body .exp-footer-conteiner, .obs-body .obs-footer-conteiner, .lunas-body .lunas-footer-conteiner, .sol-body .sol-footer-conteiner {
     flex-direction: column;
   }
-  .footer-conteiner #sign {
+  .footer-conteiner #sign, .exp-body .exp-footer-conteiner #sign, .obs-body .obs-footer-conteiner #sign, .lunas-body .lunas-footer-conteiner #sign, .sol-body .sol-footer-conteiner #sign {
     height: 20px;
     margin-right: 10px;
     font-size: 20px;
@@ -190,10 +194,10 @@
 }
 /****** MOBILE RESPONSIVE 375px ******/
 @media (max-width: 375px) {
-  .footer-conteiner {
+  .footer-conteiner, .exp-body .exp-footer-conteiner, .obs-body .obs-footer-conteiner, .lunas-body .lunas-footer-conteiner, .sol-body .sol-footer-conteiner {
     flex-direction: column;
   }
-  .footer-conteiner #sign {
+  .footer-conteiner #sign, .exp-body .exp-footer-conteiner #sign, .obs-body .obs-footer-conteiner #sign, .lunas-body .lunas-footer-conteiner #sign, .sol-body .sol-footer-conteiner #sign {
     height: 20px;
     margin-right: 10px;
     font-size: 20px;
@@ -203,10 +207,10 @@
 }
 /****** MOBILE RESPONSIVE 320px ******/
 @media (max-width: 320px) {
-  .footer-conteiner {
+  .footer-conteiner, .exp-body .exp-footer-conteiner, .obs-body .obs-footer-conteiner, .lunas-body .lunas-footer-conteiner, .sol-body .sol-footer-conteiner {
     flex-direction: column;
   }
-  .footer-conteiner #sign {
+  .footer-conteiner #sign, .exp-body .exp-footer-conteiner #sign, .obs-body .obs-footer-conteiner #sign, .lunas-body .lunas-footer-conteiner #sign, .sol-body .sol-footer-conteiner #sign {
     height: 20px;
     margin-right: 10px;
     font-size: 20px;
@@ -221,16 +225,27 @@ body {
   background-image: url("../assets/img/estrellas_1080.jpg");
   background-attachment: fixed;
 }
-
-.sol-body {
-  background-image: url("../assets/img/SOL_1366_2000.jpeg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+body .main-conteiner {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  /* APLICO GRID A LA SECCION ARTICLE PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
 }
-
-/* APLICO GRID A LA SECCION MAIN PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
-.main-conteiner {
+body .main-conteiner #intro {
+  width: 90%;
+  margin: 5%;
+  padding: 1%;
+  border-radius: 1rem;
+  border-style: double;
+  border-color: cyan;
+  font-family: math;
+  font-style: normal;
+  font-weight: normal;
+  font-size: auto;
+  line-height: normal;
+  color: white;
+}
+body .main-conteiner .article-container {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto; /* SE AGREGAN FILAS EN LA MEDIDA QUE SE VAYA NUTRIENDO EL ARTICULO */
@@ -239,14 +254,8 @@ body {
   align-items: center;
 }
 
-.main-conteiner-sol {
-  width: auto;
-  height: 590px;
-}
-
 article {
   margin: 20%;
-  border: double 1px white;
   width: auto;
   font-family: "Inter";
   font-style: normal;
@@ -254,24 +263,29 @@ article {
   font-size: x-large;
   line-height: normal;
   color: white;
-}
-
-.sol-article {
-  margin: auto;
-  border: double 1px white;
-  width: 900px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  color: white;
+  padding: 1%;
+  border-radius: 1rem;
+  border-style: double;
+  border-color: cyan;
 }
 
 main img {
   width: -webkit-fill-available;
 }
 
+/****** MOBILE RESPONSIVE 1024px ******/
+@media (max-width: 1024px) {
+  article {
+    margin: 10%;
+  }
+}
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  article {
+    margin: 15%;
+    font-size: large;
+  }
+}
 /****** MOBILE RESPONSIVE 1024, 768, 425, 375, 320 ******/
 @media (max-width: 425px) {
   body {
@@ -280,20 +294,10 @@ main img {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .sol-body {
-    background-image: url("../assets/img/sol_responsive.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   .main-conteiner {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .main-conteiner-sol {
-    height: auto;
-    margin: 12px;
   }
   main img {
     width: 335px;
@@ -312,7 +316,340 @@ main img {
     font-size: 15px;
     line-height: 24px;
   }
-  .sol-article {
+}
+.sol-body {
+  background-image: url("../assets/img/SOL_1366_2000.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sol-body .sol-header-conteiner #logo {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px yellow;
+}
+.sol-body .sol-header-conteiner #navigation .nav-links {
+  color: yellow;
+}
+.sol-body .sol-header-conteiner #navigation .nav-links li a:hover {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px yellow;
+}
+.sol-body .sol-main-conteiner {
+  width: auto;
+  height: 590px;
+}
+.sol-body .sol-main-conteiner .sol-article {
+  background-color: rgba(255, 255, 0, 0.2);
+  margin: auto;
+  padding: 1%;
+  border: double 1px yellow;
+  border-radius: 1rem;
+  width: 900px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+.sol-body .sol-footer-conteiner {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: double 3px yellow;
+  border-radius: 1rem;
+}
+
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  .sol-body .sol-main-conteiner {
+    height: auto;
+    margin: 12px;
+  }
+  .sol-body .sol-main-conteiner .sol-article {
+    margin: 10%;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+  }
+}
+/****** MOBILE RESPONSIVE 425px ******/
+@media (max-width: 425px) {
+  .sol-body {
+    background-image: url("../assets/img/sol_responsive.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sol-body .main-conteiner-sol {
+    height: auto;
+    margin: 12px;
+  }
+  .sol-body .main-conteiner-sol .sol-article {
+    margin: auto;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+  }
+}
+.lunas-body {
+  background-image: url("../assets/img/luna.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lunas-body .lunas-header-conteiner #logo {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}
+.lunas-body .lunas-header-conteiner #navigation .nav-links {
+  color: cyan;
+}
+.lunas-body .lunas-header-conteiner #navigation .nav-links li a:hover {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+}
+.lunas-body .lunas-main-conteiner {
+  width: auto;
+  height: 590px;
+}
+.lunas-body .lunas-main-conteiner .lunas-article {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0% 10% 0% 5%;
+  padding: 1%;
+  border: double 1px white;
+  border-radius: 1rem;
+  width: 900px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+.lunas-body .lunas-footer-conteiner {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: double 3px white;
+  border-radius: 1rem;
+}
+
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  .lunas-body .lunas-main-conteiner {
+    height: auto;
+    margin: 12px;
+  }
+  .lunas-body .lunas-main-conteiner .lunas-article {
+    margin: 10%;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+}
+/****** MOBILE RESPONSIVE 425px ******/
+@media (max-width: 425px) {
+  .lunas-body {
+    background-image: url("../assets/img/lunas_responsive.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lunas-body .main-conteiner-lunas {
+    height: auto;
+    margin: 12px;
+  }
+  .lunas-body .main-conteiner-lunas .lunas-article {
+    margin: auto;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+}
+.obs-body {
+  background-image: url("../assets/img/estrellas-astronomia-atacama.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.obs-body .obs-header-conteiner #logo {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px red;
+}
+.obs-body .obs-header-conteiner #navigation .nav-links {
+  color: red;
+}
+.obs-body .obs-header-conteiner #navigation .nav-links li a:hover {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px red;
+}
+.obs-body .obs-main-conteiner {
+  width: auto;
+  height: auto;
+}
+.obs-body .obs-main-conteiner .obs-article {
+  background-color: rgba(255, 0, 0, 0.2);
+  margin: 2% 0% 2% 10%;
+  padding: 1%;
+  border: double 1px red;
+  border-radius: 1rem;
+  width: 30%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+.obs-body .obs-footer-conteiner {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: double 3px red;
+  border-radius: 1rem;
+}
+
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  .obs-body .obs-main-conteiner {
+    height: auto;
+    margin: 12px;
+  }
+  .obs-body .obs-main-conteiner .obs-article {
+    margin: 10%;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+  }
+}
+/****** MOBILE RESPONSIVE 425px ******/
+@media (max-width: 425px) {
+  .obs-body {
+    background-image: url("../assets/img/sol_responsive.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .obs-body .main-conteiner-sol {
+    height: auto;
+    margin: 12px;
+  }
+  .obs-body .main-conteiner-sol .obs-article {
+    margin: auto;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+  }
+}
+.exp-body {
+  background-image: url("../assets/img/starship.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.exp-body .exp-header-conteiner #logo {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px orange;
+}
+.exp-body .exp-header-conteiner #navigation .nav-links {
+  color: orange;
+}
+.exp-body .exp-header-conteiner #navigation .nav-links li a:hover {
+  font-family: cursive;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 3px orange;
+}
+.exp-body .exp-main-conteiner .exp-article {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 5% 0% 5% 50%;
+  padding: 1%;
+  border: double 1px orange;
+  border-radius: 1rem;
+  width: 40%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+.exp-body .exp-footer-conteiner {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: double 3px orange;
+  border-radius: 1rem;
+}
+
+/****** MOBILE RESPONSIVE 768px ******/
+@media (max-width: 768px) {
+  .exp-body .exp-main-conteiner {
+    height: auto;
+    margin: 12px;
+  }
+  .exp-body .exp-main-conteiner .exp-article {
+    margin: 10%;
+    border: double 1px white;
+    width: auto;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+}
+/****** MOBILE RESPONSIVE 425px ******/
+@media (max-width: 425px) {
+  .exp-body {
+    background-image: url("../assets/img/lunas_responsive.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .exp-body .main-conteiner-lunas {
+    height: auto;
+    margin: 12px;
+  }
+  .exp-body .main-conteiner-lunas .exp-article {
     margin: auto;
     border: double 1px white;
     width: auto;

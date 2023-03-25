@@ -1,0 +1,108 @@
+/* APLICO FLEX-BOX EN El BODY PARA ENCOLUMNAR HEADER, MAIN Y FOOTER EN UNA SOLA COLUMNA*/
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/img/estrellas_1080.jpg");
+    background-attachment: fixed;
+    .main-conteiner {
+        width: 100%;
+        height: auto;
+        padding: 1%;
+        #intro{
+            width: 90%;
+            margin: 5%;
+            padding: 1%;
+            border-radius: 1rem;
+            border-style: double;
+            border-color: cyan;
+        
+            font-family: math;
+            font-style: normal;
+            font-weight: normal;
+            font-size: auto;
+            line-height: normal;
+            color: white;
+        }
+        /* APLICO GRID A LA SECCION ARTICLE PARA CREAR UNA GRILLA DE ARTICULOS E IMAGENES */
+        .article-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto; /* SE AGREGAN FILAS EN LA MEDIDA QUE SE VAYA NUTRIENDO EL ARTICULO */
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            align-items: center;
+        }
+    }
+}
+
+article{
+    margin: 20%;
+    width: auto;    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: x-large;
+    line-height: normal;
+    color: white;
+    padding: 1%;
+    border-radius: 1rem;
+    border-style: double;
+    border-color: cyan;
+}
+
+main img{
+    width: -webkit-fill-available;
+}
+
+/****** MOBILE RESPONSIVE 1024px ******/ 
+
+@media (max-width: 1024px){
+    article {
+        margin: 10%;
+    }
+}
+
+/****** MOBILE RESPONSIVE 768px ******/ 
+
+@media (max-width: 768px){
+    article {
+        margin: 15%;
+        font-size: large;
+    }
+}
+
+
+/****** MOBILE RESPONSIVE 1024, 768, 425, 375, 320 ******/ 
+
+@media (max-width: 425px){
+    body {
+        background-image: url(../assets/img/background_2.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .main-conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main img{
+        width: 335px;
+    }
+    .img-tierra {
+        order: -1;
+    }
+    #seccion3 {
+        order: 4;
+    }
+    article {
+        border: double 1px white;
+        margin: auto;
+        width: 65%;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,83 @@
+.obs-body{
+    background-image: url("../assets/img/estrellas-astronomia-atacama.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .obs-header-conteiner {
+        @extend .header-conteiner;
+        #logo{@include logo-style-red};
+        #navigation .nav-links{
+            color: red;
+            li a{&:hover{@include logo-style-red}}
+        }
+    }
+    .obs-main-conteiner{
+        width: auto;
+        height: auto;
+        .obs-article{
+            background-color: rgba(255, 0, 0, 0.2);
+            margin: 2% 0% 2% 10%;
+            padding: 1%;
+            border: double 1px red;
+            border-radius: 1rem;
+            width: 30%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: white;
+        }
+    }
+    .obs-footer-conteiner{
+        @extend .footer-conteiner;
+        background-color: rgba(255, 0, 0, 0.2);
+        border: double 3px red;
+        border-radius: 1rem;
+    }
+}
+/****** MOBILE RESPONSIVE 768px ******/ 
+@media (max-width: 768px){
+    .obs-body {
+        .obs-main-conteiner{
+            height: auto;
+            margin: 12px;
+            .obs-article{
+                margin: 10%;
+                border: double 1px white;
+                width: auto;                
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                color: white;
+            }
+        }
+    }
+}
+
+/****** MOBILE RESPONSIVE 425px ******/ 
+@media (max-width: 425px){
+    .obs-body{
+        background-image: url("../assets/img/sol_responsive.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .main-conteiner-sol{
+            height: auto;
+            margin: 12px;
+            .obs-article{
+                margin: auto;
+                border: double 1px white;
+                width: auto;                
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 30px;
+                color: white;
+            }
+        }
+    }
+}
