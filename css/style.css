@@ -271,9 +271,6 @@ body .main-conteiner .article-container article {
   border-color: cyan;
 }
 
-/*main img{
-    width: -webkit-fill-available;
-}*/
 /****** MOBILE RESPONSIVE 1024px ******/
 @media (max-width: 1024px) {
   article {
@@ -329,15 +326,13 @@ body .main-conteiner .article-container article {
     margin-block: 1%;
     width: 50%;
   }
+  body #seccion3 {
+    order: 4;
+  }
+  body .img-tierra {
+    order: -1;
+  }
 }
-#seccion3 {
-  order: 4;
-}
-
-.img-tierra {
-  order: -1;
-}
-
 .sol-body {
   background-image: url("../assets/img/SOL_1366_2000.jpeg");
   background-attachment: fixed;

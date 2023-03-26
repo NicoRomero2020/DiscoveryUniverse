@@ -52,10 +52,6 @@ body{
     }
 }
 
-/*main img{
-    width: -webkit-fill-available;
-}*/
-
 /****** MOBILE RESPONSIVE 1024px ******/ 
 
 @media (max-width: 1024px){
@@ -116,11 +112,11 @@ body{
                 }
             }
         }
+        #seccion3 {
+            order: 4;
+        }
+        .img-tierra {
+            order: -1;
+        }
     }
-}
-#seccion3 {
-    order: 4;
-}
-.img-tierra {
-    order: -1;
 }
